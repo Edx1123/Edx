@@ -1,0 +1,83 @@
+<html id="home">
+<head>
+<meta charset="UTF-8">
+<title>eDX/home</title>
+  <style>
+body
+{font-family:cursive;
+background-image:url("backgroundimageedx.jpg");
+background-repeat:no-repeat;
+background-position: center;
+}
+h1,p
+{color:green;
+}
+#date
+{text-align:right;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  
+}
+#li:hover {
+  background-color: yellow;
+}
+
+</style>
+
+</head>
+<body>
+<header>
+<center><h1>Edx</h1>
+<p> In search of knowledge </p> </center>
+<hr>
+<section id="date">
+<h1></h1>
+  <p id="datetime"></p>
+  <script>
+window.onload = function() {
+  setInterval(function() {
+    var date = new Date();
+    var displayDate = date.toLocaleDateString();
+    var displayTime = date.toLocaleTimeString();
+    document.getElementById('datetime').innerHTML = displayDate + " " + displayTime;
+  }, 1000);
+}
+</script>
+</section>
+
+<nav>
+<ul id="ul">
+<li id="li"><a href="admin.html"><h1>Admin</h1></a></li>
+<li id="li"><a href="home.html"><h1>Home</h1></a></li>
+<li id="li"><a href="e-books.html"><h1>e-books</h1></a></li>
+<li id="li"><a href="uplode.html"><h1>Upload</h1></a></li>
+<li id="li"><a href="calculator.html"><h1>Calculator</h1></a></li>
+<li id="li"><a href="#"><h1>Services</h1></a></li>
+<li id="li"><a href="contact.html"><h1>Contact us</h1></a></li>
+<li id="li"><a href="login.html"><h1>Logout</h1></a></li>
+</ul>
+</nav>
+</header>
+<main>
+<section>
+<h2>About Us</h2>
+<p>We are a company that specializes in creating amazing things.</p>
+</section>
+
+</main>
+<aside>
+</aside>
+<br><br>
+<hr>
+<footer>
+<center><p&copy; 2023 My Website. All rights reserved.</p></center>
+<center><p><a href="#">Privacy Policy</a> | <a href="#">Terms of 
+Service</a></p></center>
+</footer>
+
+</body>
+</html>

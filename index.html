@@ -1,0 +1,62 @@
+<<html>
+<head>
+<title> login/eDX </title>
+<style> 
+body{
+text-align:center;
+background-color:white;
+font-family:cursive;
+background-image:url("backgroundimageedx.jpg");
+background-repeat:no-repeat;
+background-position: center;
+color:green;
+}
+button,#reset, #submit {
+      padding: 10px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      width: 10%;
+      cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<header>
+<h1 style="font-family:cursive" > Edx </h1>
+<p style="font-family:cursive">In search of knowledge </p>
+ </header>
+ <div class="container" id="loginPage">
+    <h2>Login to Your Account</h2>
+<form onsubmit="return validate()" action="home.html">
+   username <input type="text" placeholder="Username" id="username"><br><br>
+   password <input type="password" placeholder="Password" id="password"><br><br>
+   <input type="checkbox" onclick="myFunction()"> Show Password
+ <button type="submit" id="submit"> Login </button>
+<input type="Reset" onclick="Reset()"  id="reset"  value="Reset">
+</form>
+  </div>
+<script>
+    function validate() {
+      var username = document.getElementById('username');
+      var password = document.getElementById('password');
+      if (username.value === 'revanth@29' && password.value === 'reddy') {
+}
+else {
+        alert('Invalid credentials. Please try again.');
+	return false;
+      }
+    }
+function myFunction() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script> 
+
+
+</body>
+</html>
