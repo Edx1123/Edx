@@ -25,11 +25,22 @@ ul {
 #li:hover {
   background-color: yellow;
 }
+    #loader {
+  background: url('Edx.mp4') no-repeat center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999999;
+}
 
 </style>
 
 </head>
 <body>
+  <div id="loader"></div>
+
 <header>
 <center><h1>Edx</h1>
 <p> In search of knowledge </p> </center>
@@ -46,6 +57,10 @@ window.onload = function() {
     document.getElementById('datetime').innerHTML = displayDate + " " + displayTime;
   }, 1000);
 }
+    window.addEventListener('load', function(){
+      var loader = document.getElementById('loader');
+      loader.style.display = 'none';
+    });
 </script>
 </section>
 
