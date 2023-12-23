@@ -1,62 +1,81 @@
-<<html>
+<html id="home">
 <head>
-<title> login/eDX </title>
-<style> 
-body{
-text-align:center;
-background-color:white;
-font-family:cursive;
+<title>eDX/home</title>
+  <style>
+body
+{font-family:cursive;
 background-image:url("backgroundimageedx.jpg");
 background-repeat:no-repeat;
 background-position: center;
-color:green;
 }
-button,#reset, #submit {
-      padding: 10px;
-      background-color: #4caf50;
-      color: #fff;
-      border: none;
-      width: 10%;
-      cursor: pointer;
-    }
+h1,p
+{color:green;
+}
+#date
+{text-align:right;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  
+}
+#li:hover {
+  background-color: yellow;
+}
+
 </style>
+
 </head>
 <body>
 <header>
-<h1 style="font-family:cursive" > Edx </h1>
-<p style="font-family:cursive">In search of knowledge </p>
- </header>
- <div class="container" id="loginPage">
-    <h2>Login to Your Account</h2>
-<form onsubmit="return validate()" action="home.html">
-   username <input type="text" placeholder="Username" id="username"><br><br>
-   password <input type="password" placeholder="Password" id="password"><br><br>
-   <input type="checkbox" onclick="myFunction()"> Show Password
- <button type="submit" id="submit"> Login </button>
-<input type="Reset" onclick="Reset()"  id="reset"  value="Reset">
-</form>
-  </div>
-<script>
-    function validate() {
-      var username = document.getElementById('username');
-      var password = document.getElementById('password');
-      if (username.value === 'revanth@29' && password.value === 'reddy') {
+<center><h1>Edx</h1>
+<p> In search of knowledge </p> </center>
+<hr>
+<section id="date">
+<h1></h1>
+  <p id="datetime"></p>
+  <script>
+window.onload = function() {
+  setInterval(function() {
+    var date = new Date();
+    var displayDate = date.toLocaleDateString();
+    var displayTime = date.toLocaleTimeString();
+    document.getElementById('datetime').innerHTML = displayDate + " " + displayTime;
+  }, 1000);
 }
-else {
-        alert('Invalid credentials. Please try again.');
-	return false;
-      }
-    }
-function myFunction() {
-  var x = document.getElementById("password");
-  if (x.type === "password") {
-    x.type = "text";
-  } else {
-    x.type = "password";
-  }
-}
-</script> 
+</script>
+</section>
 
+<nav>
+<ul id="ul">
+<li id="li"><a href="admin.html"><h1>Admin</h1></a></li>
+<li id="li"><a href="home.html"><h1>Home</h1></a></li>
+<li id="li"><a href="e-books.html"><h1>e-books</h1></a></li>
+<li id="li"><a href="uplode.html"><h1>Upload</h1></a></li>
+<li id="li"><a href="calculator.html"><h1>Calculator</h1></a></li>
+<li id="li"><a href="#"><h1>Services</h1></a></li>
+<li id="li"><a href="contact.html"><h1>Contact us</h1></a></li>
+</ul>
+</nav>
+</header>
+<main>
+<section>
+<h2>About Us</h2>
+<p>We are a company that specializes in creating amazing things.</p>
+</section>
+
+</main>
+<aside>
+</aside>
+<br><br>
+<hr>
+<footer>
+<center><p&copy; 2023 My Website. All rights reserved.</p></center>
+<center><p><a href="#">Privacy Policy</a> | <a href="#">Terms of 
+Service</a></p></center>
+</footer>
 
 </body>
 </html>
