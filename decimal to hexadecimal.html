@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decimal to Hexadecimal Converter</title>
+   <link rel="stylesheet" href="coverter.css">
+
+</head>
+<body>
+    <div id="converter">
+        <h2>Decimal to Hexadecimal Converter</h2>
+        <input type="number" id="decimalInput" placeholder="Enter Decimal Number"><br>
+        <button onclick="convertTohexa()">Convert</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function convertTohexa() {
+            var decimalInput = document.getElementById("decimalInput").value;
+            
+            // Check if the input is a valid number
+            if (isNaN(decimalInput)) {
+                alert("Please enter a valid decimal number");
+                return;
+            }
+	
+            var hexaResult = parseInt(decimalInput, 10).toString(16);
+
+            document.getElementById("result").innerHTML = `Hexa Decimal:0x${hexaResult}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hexadecimal to Octal Converter</title>
+    <link rel="stylesheet" href="coverter.css">
+
+</head>
+<body>
+    <div id="converter">
+        <h2>Hexadecimal to Octal Converter</h2>
+        <input type="text" id="binaryInput" placeholder="Enter Hexadecimal"><br>
+        <button onclick="convertToOctal()">Convert</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function convertToOctal() {
+            var binaryInput = document.getElementById("binaryInput").value;
+            
+            // Check if the input is a valid number
+         
+	
+            var OctalResult = parseInt(binaryInput, 16).toString(8);
+
+            document.getElementById("result").innerHTML = `Octal: 0o${OctalResult}`;
+        }
+    </script>
+</body>
+</html>

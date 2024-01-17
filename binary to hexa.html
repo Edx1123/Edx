@@ -1,0 +1,31 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary to Hexadecimal converter</title>
+<link rel="stylesheet" href="coverter.css">
+</head>
+<body>
+    <div id="converter">
+        <h1>Binary to Hexadecimal Converter</h1>
+        <input type="number" id="binaryInput" placeholder="Enter Binary Number"><br>
+        <button onclick="convertTohexa()">Convert</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function convertTohexa() {
+            var binaryInput = document.getElementById("binaryInput").value;
+            
+            // Check if the input is a valid number
+            if (isNaN(binaryInput)) {
+                alert("Please enter a valid binary number");
+                return;
+            }
+	
+            var hexaResult = parseInt(binaryInput, 2).toString(16);
+	 
+            document.getElementById("result").innerHTML = `Hexa: 0x${hexaResult}`.toUpperCase();
+        }
+    </script>
+</body>
+</html>

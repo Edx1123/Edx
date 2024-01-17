@@ -1,0 +1,33 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decimal to Binary Converter</title>
+    <link rel="stylesheet" href="coverter.css">
+
+</head>
+<body>
+    <div id="converter">
+        <h2>Decimal to Binary Converter</h2>
+        <input type="number" id="decimalInput" placeholder="Enter Decimal Number"><br>
+        <button onclick="convertToBinary()">Convert</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function convertToBinary() {
+            var decimalInput = document.getElementById("decimalInput").value;
+            
+            // Check if the input is a valid number
+            if (isNaN(decimalInput)) {
+                alert("Please enter a valid decimal number");
+                return;
+            }
+	
+            var binaryResult = parseInt(decimalInput, 10).toString(2);
+
+            document.getElementById("result").innerHTML = `Binary: 0b${binaryResult}`;
+        }
+    </script>
+</body>
+</html>
