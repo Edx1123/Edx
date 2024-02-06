@@ -2,37 +2,20 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>eDX/home</title>
+   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <style>
-    #bg {
-      background-repeat:no-repeat;
-      background-position: center;
-      background-image:url("backgroundimageedx.jpg");
-      animation: swipeUp 1s ease-in;
-    }
-content,p,h1
-{
-  font-family:cursive;
+body
+{font-family:cursive;
+background-image:url("backgroundimageedx.jpg");
+background-repeat:no-repeat;
+background-position: center;
+background-attachment: fixed;
 }
-
-@keyframes swipeUp {
-  0%{
-        opacity: 0;
-        transform: translateY(50%);
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-
 h1,p
 {color:green;
 }
 #date
 {text-align:right;
-  font-family: cursive;
 }
 ul {
   list-style-type: none;
@@ -43,37 +26,6 @@ ul {
 }
 #li:hover {
   background-color: yellow;
-}
-
-@media only screen and (min-width: 600px) {
-  /* For tablets: */
-  .col-s-1 {width: 8.33%;}
-  .col-s-2 {width: 16.66%;}
-  .col-s-3 {width: 25%;}
-  .col-s-4 {width: 33.33%;}
-  .col-s-5 {width: 41.66%;}
-  .col-s-6 {width: 50%;}
-  .col-s-7 {width: 58.33%;}
-  .col-s-8 {width: 66.66%;}
-  .col-s-9 {width: 75%;}
-  .col-s-10 {width: 83.33%;}
-  .col-s-11 {width: 91.66%;}
-  .col-s-12 {width: 100%;}
-}
-@media only screen and (min-width: 768px) {
-  /* For desktop: */
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
 }
 
 </style>
@@ -97,18 +49,17 @@ window.onload = function() {
   }, 1000);
 }
 </script>
-</section> 
-<div class="container" id="bg">
-  <div class="content">
+</section>
+
 <nav>
 <ul id="ul">
 <li id="li"><a href="admin.html"><h1>Admin</h1></a></li>
-<li id="li"><a href="home.html"><h1>Home</h1></a></li>
+<li id="li"><a href="index.html"><h1>Home</h1></a></li>
 <li id="li"><a href="e-books.html"><h1>e-books</h1></a></li>
 <li id="li"><a href="uplode.html"><h1>Upload</h1></a></li>
-<li id="li"><a href="calculator.html"><h1>Calculator</h1></a></li>
+<li id="li"><a href="calculator.html"><h1>Calculator's</h1></a></li>
 <li id="li"><a href="#"><h1>Services</h1></a></li>
-<li id="li"><a href="contact.html"><h1>Contact us</h1></a></li>
+<li id="li"><a href="Contact.html"><h1>Contact us</h1></a></li>
 </ul>
 </nav>
 </header>
@@ -128,7 +79,6 @@ window.onload = function() {
 <center><p><a href="#">Privacy Policy</a> | <a href="#">Terms of 
 Service</a></p></center>
 </footer>
-</div>
-</div>
+
 </body>
 </html>
