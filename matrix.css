@@ -1,0 +1,60 @@
+body{
+    text-align: center;
+    color: green;
+    font-family: cursive;
+    background-image: url(backgroundimageedx.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    align-items: center;
+}
+
+button,#reset,#submit {
+    padding: 10px;
+    margin: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    width: 10%;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out;
+  }
+ 
+  #submit:hover{
+    transform: scale(1.1);
+  } 
+
+  button,#reset:hover{
+    transform: scale(1.1);
+  }
+
+   ; /* Two equal columns */
+
+
+
+  #matrix1, #matrix2{
+    background-color: transparent;
+  }
+
+  @media screen and (max-width:520px){
+    .container{
+        margin-block: 40px;
+    }
+
+    .timer{
+        width: 220px;
+        height: 220px;
+        font-size: 40px;
+
+    }
+
+    button,#reset,#submit{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    button,#reset,#submit{
+        width: 40%;
+        margin: 10px;
+    } 
+}
+  

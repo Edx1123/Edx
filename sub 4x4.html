@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subtract Matrices</title>
+<link rel="stylesheet" href="matrix.css" >
+</head>
+<body>
+  <header>
+    <h1>
+        Matrix Subtraction
+    </h1>
+</header>
+<hr>
+  <div>
+    <h3>Enter Matrix 1</h3>
+    <textarea id="matrix1Input" rows="4" cols="10"></textarea>
+  </div>
+
+  <div>
+    <h3>Enter Matrix 2</h3>
+    <textarea id="matrix2Input" rows="4" cols="10"></textarea>
+  </div>
+
+  <input type="submit" id="submit" onclick="calculate()">
+
+  <div id="output"></div>
+
+  <script>
+    function subtractMatrices(matrix1, matrix2) {
+        let result = [];
+        for (let i = 0; i < matrix1.length; i++) {
+            result[i] = [];
+            for (let j = 0; j < matrix1[0].length; j++) {
+                result[i][j] = matrix1[i][j] - matrix2[i][j];
+            }
+        }
+        return result;
+    }
+
+    function parseMatrix(input) {
+        return input.trim().split('\n').map(row => row.split(/\s+/).map(Number));
+    }
+
+    function calculate() {
+        const matrix1Input = document.getElementById('matrix1Input').value;
+        const matrix2Input = document.getElementById('matrix2Input').value;
+
+        const matrix1 = parseMatrix(matrix1Input);
+        const matrix2 = parseMatrix(matrix2Input);
+
+        const resultMatrix = subtractMatrices(matrix1, matrix2);
+
+        const outputDiv = document.getElementById('output');
+        outputDiv.innerHTML = '';
+
+        const table = document.createElement('table');
+        for (let row of resultMatrix) {
+            const tr = document.createElement('tr');
+            for (let cellValue of row) {
+                const td = document.createElement('td');
+                td.textContent = cellValue;
+                tr.appendChild(td);
+            }
+            table.appendChild(tr);
+        }
+        outputDiv.appendChild(table);
+    }
+  </script>
+</body>
+</html>
